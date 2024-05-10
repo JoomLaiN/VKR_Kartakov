@@ -4,11 +4,18 @@ from django.shortcuts import render
 
 def index(request):
     context ={
-        'title': 'home',
+        'title': 'Аптека - Главная',
         'content': 'Главная страница моей аптеки'
     }
 
     return render(request, 'main/index.html', context)
 
 def about(request):
-    return HttpResponse('about page')
+    context ={
+        'title': 'Аптека - Отзывы',
+        'content': 'О нас',
+        'text_on_page': "Тут типа отзывы из views"
+    }
+
+
+    return render(request, 'main/about.html', context)
