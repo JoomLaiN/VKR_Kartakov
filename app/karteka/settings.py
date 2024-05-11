@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
-from django.conf.global_settings import STATIC_ROOT
+from django.conf.global_settings import MEDIA_ROOT, MEDIA_URL, STATIC_ROOT
 
 
 
@@ -132,6 +132,9 @@ STATIC_URL = 'neSmotri/'
 STATICFILES_DIRS = [
     BASE_DIR/ 'static'
 ]
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
 
 INTERAL_IPS = [
     '127.0.0.1:8000',
