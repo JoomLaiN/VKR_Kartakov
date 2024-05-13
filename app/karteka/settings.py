@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-75tm36$l%ukonxd0b8l7h9826-n5(a5v*k&#(kzjpg)citrwj&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     'main',
     'goods',
+    'users',
 
 ]
 
@@ -68,7 +69,7 @@ ROOT_URLCONF = 'karteka.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
