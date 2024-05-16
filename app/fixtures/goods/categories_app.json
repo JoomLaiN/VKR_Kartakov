@@ -1,0 +1,58 @@
+[
+  {
+    "model": "goods.categories",
+    "pk": 1,
+    "fields": {
+      "name": "Антибиотики",
+      "slug": "antibiotiki"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 2,
+    "fields": {
+      "name": "Противовоспалительные",
+      "slug": "protivovospalitelnye"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Витамины",
+      "slug": "vitaminy"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 4,
+    "fields": {
+      "name": "Анальгетики",
+      "slug": "analgetiki"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 5,
+    "fields": {
+      "name": "Противоаллергические",
+      "slug": "protivoallergicheskie"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 6,
+    "fields": {
+      "name": "Противокашлевые",
+      "slug": "protivokashlevye"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 7,
+    "fields": {
+      "name": "Противогрибковые",
+      "slug": "protivogribkovye"
+    }
+  }
+]
