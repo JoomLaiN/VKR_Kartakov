@@ -85,7 +85,8 @@ def profile(request):
     context = {
         'title': 'Аптека - Профиль',
         'form': form,
-        'orders': orders
+        'orders': orders,
+        'profile_page': True
     }
     return render(request, 'users/profile.html', context)
 

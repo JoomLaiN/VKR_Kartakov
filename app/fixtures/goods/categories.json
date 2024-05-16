@@ -1,58 +1,66 @@
 [
     {
         "model": "goods.categories",
+        "pk": 1,
+        "fields": {
+            "name": "Антибиотики",
+            "slug": "antibiotiki"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 2,
+        "fields": {
+            "name": "Антисептики",
+            "slug": "antiseptiki"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 3,
+        "fields": {
+            "name": "Противогрибковые",
+            "slug": "protivogribkovye"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Противомикробные",
+            "slug": "protivomikrobnye"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 5,
+        "fields": {
+            "name": "Препараты от паразитов",
+            "slug": "preparaty-ot-parazitov"
+        }
+    },
+    {
+        "model": "goods.categories",
         "pk": 6,
         "fields": {
-            "name": "Все товары",
-            "slug": "all"
+            "name": "Дыхательная система",
+            "slug": "dyhatelnaya-sistema"
         }
     },
     {
         "model": "goods.categories",
         "pk": 7,
         "fields": {
-            "name": "Кухня",
-            "slug": "kuhnya"
+            "name": "Иммунная система",
+            "slug": "immunnaya-sistema"
         }
     },
     {
         "model": "goods.categories",
         "pk": 8,
         "fields": {
-            "name": "Спальня",
-            "slug": "spalnya"
-        }
-    },
-    {
-        "model": "goods.categories",
-        "pk": 9,
-        "fields": {
-            "name": "Гостинная",
-            "slug": "gostinnaya"
-        }
-    },
-    {
-        "model": "goods.categories",
-        "pk": 10,
-        "fields": {
-            "name": "Офис",
-            "slug": "ofis"
-        }
-    },
-    {
-        "model": "goods.categories",
-        "pk": 11,
-        "fields": {
-            "name": "Фурнитура",
-            "slug": "furnitura"
-        }
-    },
-    {
-        "model": "goods.categories",
-        "pk": 12,
-        "fields": {
-            "name": "Декор",
-            "slug": "dekor"
+            "name": "Все товары",
+            "slug": "all"
         }
     }
 ]

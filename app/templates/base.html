@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static "deps/css/bootstrap/bootstrap.min.css" %}">
     <link rel="stylesheet" href="{% static "deps/css/my_css.css" %}">
     <!-- Стиль footer-a для главной страницы -->
+    <link rel="stylesheet" href="{% static "deps/css/my_footer_css.css"%}">
     {% block css %} 
     
     {% endblock  %}
@@ -26,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand" href="{% url "main:index" %}">Home</a>
+                <a class="navbar-brand" href="{% url "main:index" %}">Pharmacy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +60,6 @@
                                 Мой профиль
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
                                 <li><a class="dropdown-item  text-white" href=" {% url "user:profile" %} ">Личный кабинет</a>
                                 </li>
                                 {% if user.is_admin or user.is_staff %}
@@ -75,7 +75,7 @@
                         
                     </ul>
                     <form class="d-flex" role="search" action=" {% url "catalog:search" %}" method="get">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                        <input class="form-control me-4" type="search" placeholder="Поиск" aria-label="Search" name="q">
                         <button class="btn btn-outline-success text-white" type="submit">Поиск</button>
                     </form>
                 </div>
@@ -122,10 +122,19 @@
             </div>
         </div>
     </section>
-    {% block footer %}{% endblock footer %}
+    {% if not profile_page %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Pharmacy "Final qualification work" Kartakov 2024</p>
+        </div>
+    </footer>
+    {% endif %}
+
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
     <script src="{% static "deps/js/bootstrap/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "deps/js/custom.js" %}"></script>
+
 </body>
 
 </html>

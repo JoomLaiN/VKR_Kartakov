@@ -7,7 +7,6 @@ from goods.models import Categories
 def index(request):
     context ={
         'title': 'Аптека - Главная',
-        'content': 'Главная страница моей аптеки',
     }
 
     return render(request, 'main/index.html', context)
