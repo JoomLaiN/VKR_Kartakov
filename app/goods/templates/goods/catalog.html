@@ -61,37 +61,35 @@
     {% for product in goods %}
     
     <!-- Карта товара -->
-        <div class="col-lg-4 col-md-6 p-4">
-            <div class="card border-primary rounded custom-shadow">
-                {% if product.image %}
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                {% else %}
-                    <img src="{% static "deps/images/Not found image.png" %}" class="card-img-top" alt="...">
-                {% endif %}
-                <div class="card-body">
-                    <a href="{% url "catalog:product" product.slug %}">
-                        <p class="card-title">{{ product.name}}</p>
+    <div class="col-lg-4 col-md-6 p-4">
+        <div class="card border-primary rounded custom-shadow custom-card zone-card teapot-card">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            {% else %}
+                <img src="{% static "deps/images/Not found image.png" %}" class="card-img-top" alt="...">
+            {% endif %}
+            <div class="card-body">
+                <a href="{% url "catalog:product" product.slug %}">
+                    <h5 class="card-title">{{ product.name}}</h5>
+                </a>
+                <p class="card-text">{{ product.description|truncatechars:55}}</p>
+                <p class="product_id">id: {{ product.display_id }}</p>
+                <div class="d-flex justify-content-between">
+                    {% if product.discount %}
+                        <p><s>{{ product.price}}</s> ₽</p>
+                        <p><strong>{{ product.sell_price}} ₽</strong></p>
+                        <span class="badge bg-warning text-dark">Скидка {{ product.discount}} %</span> 
+                    {% else %} 
+                        <p><strong>{{ product.price}} ₽</strong></p> 
+                    {% endif %}
+                    <a href="{% url "cart:cart_add" %}" class="btn add-to-cart" data-product-id="{{ product.id }}">
+                        {% csrf_token %}
+                        <img class="mx-1" src="{% static "/deps/icons/cart-plus.svg" %}" alt="Catalog Icon" width="32" height="32">
                     </a>
-                    <p class="card-text">{{ product.description|truncatechars:55}}</p>
-                    <p class="product_id">id: {{ product.display_id }}</p>
-                    <div class="d-flex justify-content-between">
-                        {% if product.discount %}
-                            <p><s>{{ product.price}}</s> ₽</p>
-                            <p><strong>{{ product.sell_price}} ₽</strong></p>
-                            <span class="badge bg-warning text-dark">Скидка {{ product.discount}} %</span> 
-                        {% else %} 
-                            <p><strong>{{ product.price}} ₽</strong></p> 
-                        {% endif  %}
-                        <a href=" {% url "cart:cart_add" %}" class="btn add-to-cart"
-                        data-product-id="{{ product.id }}">
-                            {% csrf_token %}
-                            <img class="mx-1" src="{% static "/deps/icons/cart-plus.svg" %}" alt="Catalog Icon"
-                                width="32" height="32">
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
     {% endfor %}
 
 
