@@ -36,3 +36,14 @@ body {
   border-radius: 15px;
   font-size: 0.7rem;
 }
+
+
+
+
+.price {
+  display: inline-block;
+  background-color: rgb(109, 215, 205);
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 0;
+}

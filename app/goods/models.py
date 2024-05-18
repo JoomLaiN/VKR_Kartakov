@@ -15,6 +15,7 @@ class Categories(models.Model):
         return self.name
 
 class Products(models.Model):
+
     name = models.CharField(max_length=150, unique=True, verbose_name='Название')
     slug = models.SlugField(max_length=200, unique=True, blank=True, null=True, verbose_name='URL')
     description = models.TextField(blank=True, null=True, verbose_name='Описание')
@@ -23,6 +24,10 @@ class Products(models.Model):
     discount = models.DecimalField(default=0.00, max_digits=4, decimal_places=2, verbose_name='Скидка в %')
     quantity = models.PositiveIntegerField(default=0, verbose_name='Кол-во')
     category = models.ForeignKey(to=Categories, on_delete=models.CASCADE, verbose_name='Категория')
+
+    composition = models.TextField(blank=True, null=True, verbose_name='Состав')
+    usage_instructions = models.TextField(blank=True, null=True, verbose_name='Инструкция по применению')
+    contraindications = models.TextField(blank=True, null=True, verbose_name='Противопоказания')
 
     class Meta:
         db_table = 'product'
@@ -41,3 +46,4 @@ class Products(models.Model):
             return round(self.price - self.price*self.discount/100, 2)
         
         return self.price
+
