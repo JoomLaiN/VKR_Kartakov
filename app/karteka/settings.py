@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-75tm36$l%ukonxd0b8l7h9826-n5(a5v*k&#(kzjpg)citrwj&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['vkr-kartakov.onrender.com', '44.226.145.213', '54.187.200.255', '34.213.214.55', '35.164.95.156', '44.230.95.183', '44.229.200.200']
 
 
 # Application definition
